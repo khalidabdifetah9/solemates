@@ -112,7 +112,8 @@ function SlideContent({ shoe, index, progressIndex }) {
                   src={shoe.cardImage}
                   alt={shoe.cardTitle}
                   fill
-                  sizes="90vw"
+                  sizes="70vw"
+                  priority
                   className="object-cover"
                 />
               </div>

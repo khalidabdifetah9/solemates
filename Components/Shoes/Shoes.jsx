@@ -95,6 +95,7 @@ export default function ShoesPage() {
                   src={shoe.image}
                   alt={shoe.name}
                   fill
+                  priority
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-contain"
                 />
