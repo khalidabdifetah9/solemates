@@ -43,6 +43,7 @@ const NavBar = ({ onIntroComplete }) => {
            height={100}
            alt="SoleMate Logo"
            src={"/solemates_logo.svg"}
+           className="w-40"
           />
         </Link>
 

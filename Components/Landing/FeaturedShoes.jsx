@@ -18,7 +18,7 @@ export default function FeaturedShoes() {
 
   return (
     <section ref={containerRef} className="relative font-poppins h-[300vh] bg-[#f2f2f4]">
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between p-8 sm:p-12 lg:p-16">
+      <div className="sticky top-0 h-screen w-full  overflow-hidden flex flex-col justify-between p-8 sm:p-12 lg:p-16">
         {shoesData.map((shoe, idx) => (
           <SlideContent key={shoe.id} shoe={shoe} index={idx} progressIndex={currentIndex} />
         ))}
@@ -55,7 +55,7 @@ function SlideContent({ shoe, index, progressIndex }) {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 items-center pointer-events-none"
         >
-          <div className="lg:col-span-7 z-20 flex flex-col justify-between h-full py-6 pointer-events-auto">
+          <div className="lg:col-span-7 z-20 md:pl-20 flex flex-col justify-between h-full py-6 pointer-events-auto">
             <div>
               <motion.p
                 initial={{ y: -20, opacity: 0 }}

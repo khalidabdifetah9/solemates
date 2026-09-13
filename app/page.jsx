@@ -7,7 +7,7 @@ import Footers from "@/Components/Landing/Footers";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-500">
       <main className="relative bg-white">
         <div className="fixed top-0 left-0 w-full h-screen z-0">
           <BrandStory />

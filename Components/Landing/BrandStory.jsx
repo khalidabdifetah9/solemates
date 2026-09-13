@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function BrandStory() {
   return (
     <section className="bg-white text-[#1a1a1a] mt-20 font-poppins px-8 py-20 md:py-32">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <div className="grid grid-cols-1 md:pl-30 md:grid-cols-12 gap-12 lg:gap-16 items-start">
         <div className="md:col-span-5 lg:col-span-5">
           <p className="text-xl sm:text-2xl font-medium tracking-tight leading-snug max-w-xs text-black">
             SoleMates handcrafted
