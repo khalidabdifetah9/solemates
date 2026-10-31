@@ -7,8 +7,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
-  { href: "/", label: "HOME" },
-  { href: "/shoes", label: "SHOES" },
+  { href: "/", label: "HOME", active: true },
+  { href: "/about", label: "About", active: false },
+  { href: "/shop", label: "Shop", active: false },
+  { href: "/contact", label: "Contact", active: false },
 ];
 
 const EASE = [0.22, 1, 0.36, 1];
@@ -23,7 +25,9 @@ const wordVariant = {
 
 function AnimatedWord({ text, className = "" }) {
   return (
-    <span className={`inline-block overflow-hidden pb-1 align-bottom ${className}`}>
+    <span
+      className={`inline-block overflow-hidden pb-1 align-bottom ${className}`}
+    >
       <motion.span className="inline-block" variants={wordVariant}>
         {text}
       </motion.span>
@@ -37,13 +41,16 @@ const NavBar = ({ onIntroComplete }) => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
       <div className="flex items-center justify-between w-full px-4 sm:px-8 md:px-14 lg:px-18 py-4 sm:py-5">
-        <Link href="/" className="text-black font-black tracking-wider uppercase text-lg sm:text-xl">
-          <Image 
-           width={200}
-           height={100}
-           alt="SoleMate Logo"
-           src={"/solemates_logo.svg"}
-           className="w-40"
+        <Link
+          href="/"
+          className="text-black font-black tracking-wider uppercase text-lg sm:text-xl"
+        >
+          <Image
+            width={200}
+            height={100}
+            alt="SoleMate Logo"
+            src={"/solemates_logo.svg"}
+            className="w-40"
           />
         </Link>
 
@@ -66,8 +73,8 @@ const NavBar = ({ onIntroComplete }) => {
                 href={href}
                 className={
                   isActive
-                    ? "text-[#D83B01] font-semibold transition-colors"
-                    : "text-gray-900 transition-colors"
+                    ? "text-[#A9DDF2] font-semibold transition-colors"
+                    : "text-white font-poppins transition-colors"
                 }
               >
                 <AnimatedWord text={label} />

@@ -12,7 +12,7 @@ export default function Home() {
         <div className="fixed top-0 left-0 w-full h-screen z-0">
           <BrandStory />
         </div>
-        <div className="relative z-10 bg-white min-h-screen mb-[100vh] shadow-xl px-10">
+        <div className="relative z-10 bg-white min-h-screen mb-[100vh] shadow-xl">
           <Hero />
         </div>
       </main>

@@ -1,61 +1,38 @@
 "use client";
 
 import Image from "next/image";
-import Navbar from "./NavBar";
+import Link from "next/link";
 import { motion } from "framer-motion";
-
-const EASE = [0.22, 1, 0.36, 1];
-
-const NAVBAR_FINISH_TIME = 0.85;
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[100svh] overflow-hidden bg-white">
-      <Navbar />
-
-      {/* Hero background: no horizontal bleed on mobile so nothing gets clipped off-screen */}
-      <div className="absolute top-2 bottom-0 left-0 right-0 sm:-left-10 sm:-right-10 md:-left-16 md:-right-16 lg:-bottom-5 lg:-left-20 lg:-right-20 z-0">
+    <section className="w-full h-[100svh] overflow-hidden bg-white">
+      <div className="relative w-full z-0 h-full">
         <Image
-          src="/heroi.avif"
+          src="/solemates_hero_bg.png"
           alt="Hero Background"
           fill
           priority
-          sizes="(max-width: 640px) 100vw, 120vw"
-          className="object-contain object-center"
+          sizes="100vw"
+          className="object-cover object-center"
         />
       </div>
-
-      <motion.div
-        initial={{ y: "100%", opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: EASE, delay: NAVBAR_FINISH_TIME }}
-        className="absolute -left-4 bottom-2 sm:-left-10 sm:bottom-6 md:-left-12 md:bottom-8 lg:-left-15 lg:bottom-12 z-20 w-28 h-28 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[35rem] lg:h-[35rem]"
-      >
-        <Image
-          src="/left_to_hero.avif"
-          alt="Shoe Material Diagram"
-          sizes="(max-width: 640px) 40vw, 60vw"
-          fill
-          priority
-          className="object-contain object-center"
-        />
-      </motion.div>
-
-      <motion.div
-        initial={{ y: "100%", opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: EASE, delay: NAVBAR_FINISH_TIME + 0.2 }}
-        className="absolute -right-4 -bottom-8 sm:-right-10 sm:-bottom-20 md:-right-12 md:-bottom-28 lg:-right-15 lg:-bottom-45 z-20 w-28 h-28 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[35rem] lg:h-[35rem]"
-      >
-        <Image
-          src="/right_to_hero.avif"
-          alt="Knit Texture Detail"
-          fill
-          sizes="(max-width: 640px) 40vw, 60vw"
-          priority
-          className="object-contain object-center"
-        />
-      </motion.div>
+      <main className="flex absolute top-55 left-25 flex-col space-y-20">
+        <div className="flex flex-col space-y-5">
+          <p className="text-white/90 max-w-110 text-2xl font-poppins">
+            {
+              "Premium sneakers for everyday adventures. Designed for comfort,built for what's next "
+            }
+          </p>
+          <Link
+           href={"/shop"}
+           className="px-13 py-4 bg-[#A9DDF2] max-w-50 rounded-lg font-semibold text-black/80 font-poppins text-lg"
+          >Shop Now</Link>
+        </div>
+        <div className="text-[#A9DDF2] tracking-tighter font-poppins uppercase text-[12vw] font-extrabold mt-20">
+          sole mates
+        </div>
+      </main>
     </section>
   );
 }
