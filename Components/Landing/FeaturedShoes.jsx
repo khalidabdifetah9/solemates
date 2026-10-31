@@ -17,14 +17,14 @@ export default function FeaturedShoes() {
   const currentIndex = useTransform(scrollYProgress, [0, 0.33, 0.66, 1], [0, 0, 1, 2]);
 
   return (
-    <section ref={containerRef} className="relative font-poppins h-[300vh] bg-[#f2f2f4]">
+    <section ref={containerRef} className="relative font-poppins h-[300vh] bg-white">
       <div className="sticky top-0 h-screen w-full  overflow-hidden flex flex-col justify-between p-8 sm:p-12 lg:p-16">
         {shoesData.map((shoe, idx) => (
           <SlideContent key={shoe.id} shoe={shoe} index={idx} progressIndex={currentIndex} />
         ))}
 
         <div className="absolute bottom-10 right-10 z-30">
-          <Link href={"/shoes"} className="bg-white text-black font-semibold tracking-wider text-xs sm:text-sm uppercase px-8 py-4 rounded-md shadow-lg hover:bg-black hover:text-white transition-colors duration-300">
+          <Link href={"/shoes"} className="bg-[#A9DDF2] text-black font-semibold tracking-wider text-xs sm:text-sm uppercase px-8 py-4 rounded-md shadow-lg hover:bg-black hover:text-white transition-colors duration-300">
             More Collections
           </Link>
         </div>
@@ -70,7 +70,7 @@ function SlideContent({ shoe, index, progressIndex }) {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-5xl sm:text-7xl lg:text-8xl font-black text-black tracking-tight leading-none whitespace-pre-line uppercase mb-6"
+                className="text-5xl sm:text-7xl lg:text-8xl font-racing font-black text-black tracking-tight leading-none whitespace-pre-line uppercase mb-6"
               >
                 {shoe.title}
               </motion.h2>
@@ -118,7 +118,7 @@ function SlideContent({ shoe, index, progressIndex }) {
                 />
               </div>
               <div>
-                <h4 className="font-bold text-black text-base sm:text-lg uppercase tracking-wider mb-2">
+                <h4 className="font-bold text-black  text-base sm:text-lg uppercase tracking-wider mb-2">
                   {shoe.cardTitle}
                 </h4>
                 <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">

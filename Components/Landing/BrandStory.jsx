@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function BrandStory() {
   return (
-    <section className="bg-white text-[#1a1a1a] mt-20 font-poppins px-8 py-20 md:py-32">
+    <section className="bg-[#e4ccb4] text-[#1a1a1a] mt-20 font-poppins px-8 py-20 md:py-32">
       <div className="grid grid-cols-1 md:pl-30 md:grid-cols-12 gap-12 lg:gap-16 items-start">
         <div className="md:col-span-5 lg:col-span-5">
-          <p className="text-xl sm:text-2xl font-medium tracking-tight leading-snug max-w-xs text-black">
+          <p className="text-xl sm:text-2xl font-racing font-medium tracking-tight leading-snug max-w-xs text-black">
             SoleMates handcrafted
             <br />
             comfort from Addis Ababa.
@@ -14,13 +14,13 @@ export default function BrandStory() {
         </div>
 
         <div className="md:col-span-7 lg:col-span-7 space-y-8">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-[1.1] text-black">
+          <h2 className="text-4xl sm:text-5xl font-racing lg:text-6xl font-normal tracking-tight leading-[1.1] text-black">
             Where Ethiopian heritage
             <br />
             walks with modern style.
           </h2>
 
-          <div className="space-y-6 text-base sm:text-lg text-[#555555] font-normal leading-relaxed max-w-2xl">
+          <div className="space-y-6 text-base sm:text-lg text-black font-normal leading-relaxed max-w-2xl">
             <p>
               Born in the vibrant heart of Addis Ababa, SoleMates was created to
               honor Ethiopia’s rich history of leather craftsmanship while

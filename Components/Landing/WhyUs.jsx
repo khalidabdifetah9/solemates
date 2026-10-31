@@ -34,7 +34,7 @@ function AnimatedWords({ text, className = "", staggerDelay = 0.04 }) {
       }}
     >
       {words.map((word, i) => (
-        <span key={i} className="inline-block overflow-hidden pb-1 align-bottom">
+        <span key={i} className="inline-block font-racing overflow-hidden pb-1 align-bottom">
           <motion.span className="inline-block" variants={wordVariant}>
             {word}
             {i !== words.length - 1 ? "\u00A0" : ""}
@@ -60,7 +60,7 @@ export default function WhyUs() {
           <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-normal tracking-tight leading-[1.1]">
             <AnimatedWords
               text="SoleMates is an Ethiopian brand crafting bold, high performance footwear for"
-              className="text-white font-medium"
+              className="text-[#A9DDF2] font-medium"
             />{" "}
             <AnimatedWords
               text="ambitious everyday movers with authentic quality and refined execution."
