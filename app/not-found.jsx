@@ -8,14 +8,14 @@ const Links = [
 
 const NotFound = () => {
   return (
-    <div className="mx-auto max-w-300">
-      <h1 className="font-racing text-[10vw] text-center">404</h1>
+    <div className="mx-auto mt-[20vh] max-w-300 text-center">
+      <h1 className="font-racing text-[10vw] ">404</h1>
       <p className="font-poppins text-xl">
-        {"this page lost it's shoes and couldn't run to you"}
+        {"this page has lost it's shoes and couldn't run to you"}
       </p>
-      <div className="font-poppins">
+      <div className="font-poppins space-x-5 mt-10">
         {Links.map(({ label, href, key }) => (
-          <Link key={key} href={href}>
+          <Link className="px-12 py-4 rounded-lg bg-[#A9DDF2]" key={key} href={href}>
             {label}
           </Link>
         ))}

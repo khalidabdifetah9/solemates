@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative w-full h-[100svh] overflow-hidden bg-white">
       <div className="relative w-full z-0 h-full">
         <Image
-          src="/solemates_hero_bg.png"
+          src="/solemates_hero_bg.avif"
           alt="Hero Background"
           fill
           priority
